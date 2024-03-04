@@ -9,14 +9,14 @@ bool checkNumbers(int a, int b, int c) //Функция для проверки 
 
 int triangle(int firstElement, ...) //Основная функция
 {
-	int* address = &firstElement; //Получаем адресс первого элемента
+	int* address = &firstElement; //Получаем адрес первого элемента
 	int Arr[500]; //Инициализируем массив
 	int counter = 0; //Инициализируем счетчик массива
 	int successCounter = 0; //Инициализируем счетчик успешных троек
 
 	while (*address != -1) //Пока не дошли до минус единицы
 	{
-		if (*address == 0) //Если значение по аддрессу = 0, то
+		if (*address == 0) //Если значение по адресу = 0, то
 		{
 			if (counter == 3 && checkNumbers(Arr[0], Arr[1], Arr[2])) //Если до 0 было 3 элемента и при этом они могут быть сторонами треугольника,
 				successCounter++; //то увеличиваем счетчика успешных троек на 1
