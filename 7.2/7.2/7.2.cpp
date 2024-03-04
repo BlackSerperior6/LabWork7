@@ -29,7 +29,7 @@ int triangle(int firstElement, ...) //Основная функция
 			counter++; //Увеличиваем счетчик массива
 		}
 
-		address++; //Переходим к следующему параметру путем увеличения указателя на 1
+		address+=2; //Переходим к следующему параметру путем увеличения указателя на 1
 	}
 
 	return successCounter; //Возвращаем ответ
@@ -37,7 +37,7 @@ int triangle(int firstElement, ...) //Основная функция
 
 int main()
 {
-	cout << triangle(5, 0, -1) << endl;
-	cout << triangle(5, 7, 6, 0, 8, 9, 10, 0, -1) << endl;
-	cout << triangle(5, 7, 6, 0, 8, 9, 10, 0, 8, 2, -1) << endl;
+	cout << triangle(5, 0, -1) << endl; //3
+	cout << triangle(5, 7, 6, 0, 8, 9, 10, 0, -1) << endl; //9
+	cout << triangle(5, 7, 6, 0, 8, 9, 10, 0, 8, 2, -1) << endl; //11
 }
